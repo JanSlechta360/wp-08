@@ -1,6 +1,6 @@
 <?php
 
-// guested number from 0 to 100
+// guested number from 0 to 100s
 
 
 define('MAX_NUMBER', 100);
