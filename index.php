@@ -20,7 +20,7 @@ $yourNumber = 0;
      <p> Hadej cislo mezi <?= MIN_NUMBER ?> - <?= MAX_NUMBER ?></p>
 
 
-     <p>Hadam, ze je cislo: <?= $yourNumber ?></p>
+    <!-- <p>Hadam, ze je cislo: <?= $yourNumber ?></p> -->
 
      <?php
 /*
@@ -32,14 +32,14 @@ $yourNumber = 0;
     <?php }
 */
 
-     while ($guessNumber != $yourNumber  { ?>
+     while ($guessNumber != $yourNumber)  { ?>
            <p>Hadane cislo? <?= $yourNumber ?> neni spravne. Zkus jine. </p>
         <?php   
             $yourNumber = rand(MIN_NUMBER, MAX_NUMBER);    
      }
      ?>
 
-     <p>Gratulujeme, uhadl jsi cislo gueessNumber<?= $guessNumber ?> svym hadanym cislem <?= $yourNumber ?></p>
+     <p>Gratulujeme, uhadl jsi cislo gueessNumber <?= $guessNumber ?> svym hadanym cislem <?= $yourNumber ?></p>
      
 </body>
 </html>
