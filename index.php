@@ -3,7 +3,7 @@
 // guested number from 0 to 10
 $guessNumber = 9;
 
-define('MAX_NUMBER', 10)
+define('MAX_NUMBER', 10);
 define('MIN_NUMBER', 0);
 
 $yourNumber = 0; 
