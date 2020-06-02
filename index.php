@@ -1,11 +1,10 @@
 <?php
 
-// guested number from 0 to 100s
+// guested number from 0 to 10
+$guessNumber = 9;
 
-
-define('MAX_NUMBER', 100);
+define('MAX_NUMBER', 10);
 define('MIN_NUMBER', 0);
-$guessNumber = rand(MIN_NUMBER, MAX_NUMBER); 
 
 $yourNumber = 0; 
 ?>
@@ -33,19 +32,14 @@ $yourNumber = 0;
     <?php }
 */
 
-     while ($guessNumber != $yourNumber)  { 
-          if ($yourNumber < $gueessNumber) { ?>
-           <p> Hadane cislo: <?= $yourNumber ?> Musi byt vestsi </p>
-
-          <?php
-          } else { ?>
-               <p> Hadane cislo: <?= $yourNumber ?> Musi byt mensi </p>
-         <?php } 
+     while ($guessNumber != $yourNumber  { ?>
+           <p>Hadane cislo? <?= $yourNumber ?> neni spravne. Zkus jine. </p>
+        <?php   
             $yourNumber = rand(MIN_NUMBER, MAX_NUMBER);    
      }
      ?>
 
-     <p>Gratulujeme, uhadl jsi cislo gueessNumber <?= $guessNumber ?> svym hadanym cislem <?= $yourNumber ?></p>
-     
+     <p>Gratulujeme, uhadl jsi cislo gueessNumber<?= $guessNumber ?> svym hadanym cislem <?= $yourNumber ?></p>
+
 </body>
 </html>
