@@ -1,12 +1,14 @@
 <?php
 
 // guested number from 0 to 10
-$guessNumber = 9;
 
 define('MAX_NUMBER', 10);
 define('MIN_NUMBER', 0);
 
+$guessNumber = rand(MIN_NUMBER, MAX_NUMBER);
+
 $yourNumber = 0; 
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +18,7 @@ $yourNumber = 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+      <body>
      <p> Hadej cislo mezi <?= MIN_NUMBER ?> - <?= MAX_NUMBER ?></p>
 
 
@@ -32,14 +34,21 @@ $yourNumber = 0;
     <?php }
 */
 
-     while ($guessNumber != $yourNumber  { ?>
-           <p>Hadane cislo? <?= $yourNumber ?> neni spravne. Zkus jine. </p>
-        <?php   
+     while ($guessNumber != $yourNumber)  { ?>
+           <p> Tve cislo: <?= $yourNumber ?> neni spravne. Zkus jine. </p> 
+     <?php      
+          if ($yourNumber > $guessNumber) {
+               echo "Tve cislo neni spravne. Je mensi nez hadane cislo.";
+          }  
+          elseif ($yourNumber < $guessNumber) {
+               echo "Tve cislo neni spravne. Je vetsi nez hadane cislo.";
+          }
+
             $yourNumber = rand(MIN_NUMBER, MAX_NUMBER);    
      }
      ?>
 
-     <p>Gratulujeme, uhadl jsi cislo gueessNumber<?= $guessNumber ?> svym hadanym cislem <?= $yourNumber ?></p>
+     <p>Gratulujeme, uhadl jsi cislo <?= $guessNumber ?> </p>
 
-</body>
+      </body>
 </html>
